@@ -5,3 +5,9 @@ https://www.st.com/resource/en/user_manual/dm00105879-description-of-stm32f4-hal
 
 Helpful STM32 Setup Guide
 https://www.digikey.com/en/maker/projects/getting-started-with-stm32-introduction-to-stm32cubeide/6a6c60a670c447abb90fd0fd78008697
+
+SCD4x library (unfortunately only a c++ vesion exists -- so stm will be in c++)
+https://github.com/Sensirion/arduino-i2c-scd4x
+
+Converting stm32 projects to c++
+https://shawnhymel.com/1941/how-to-use-c-with-stm32cubeide/
