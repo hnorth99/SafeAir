@@ -1,0 +1,10 @@
+00:02:47 **** Incremental Build of configuration Debug for project STM32F407G-DISC1 ****
+make -j6 all 
+arm-none-eabi-size   STM32F407G-DISC1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31836	    152	   3600	  35588	   8b04	STM32F407G-DISC1.elf
+Finished building: default.size.stdout
+ 
+
+00:02:48 Build Finished. 0 errors, 0 warnings. (took 297ms)
+

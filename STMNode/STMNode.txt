@@ -1,1 +1,7 @@
-STMNode
+STMNode ReadMe
+
+STM32 HAL Spec
+https://www.st.com/resource/en/user_manual/dm00105879-description-of-stm32f4-hal-and-ll-drivers-stmicroelectronics.pdf
+
+Helpful STM32 Setup Guide
+https://www.digikey.com/en/maker/projects/getting-started-with-stm32-introduction-to-stm32cubeide/6a6c60a670c447abb90fd0fd78008697
