@@ -1536,3 +1536,39 @@ java.io.FileNotFoundException: C:\Users\hunte\Documents\SafeAir\STMNode\STM32F40
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SESSION 2022-01-24 19:08:48.371 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-01-24 19:08:58.780
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-01-24 19:08:58.874
+!MESSAGE Log4j initialized with config file C:\Users\hunte\Documents\SafeAir\STMNode\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-01-24 19:09:07.857
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-01-24 20:58:50.274 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-01-24 20:59:15.623
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-01-24 20:59:15.701
+!MESSAGE Log4j initialized with config file C:\Users\hunte\Documents\SafeAir\STMNode\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-01-24 20:59:23.722
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.build 1 1 2022-01-24 21:54:58.782
+!MESSAGE Converted project STM32F407G-DISC1 to C in 141 (ms)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-01-24 22:04:02.576
+!MESSAGE Indexed 'STM32F407G-DISC1' (36 sources, 100 headers) in 2.96 sec: 7,773 declarations; 48,811 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0035%)

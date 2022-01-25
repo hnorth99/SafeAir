@@ -8,13 +8,13 @@ C_SRCS += \
 ../USB_HOST/Target/usbh_conf.c \
 ../USB_HOST/Target/usbh_platform.c 
 
-C_DEPS += \
-./USB_HOST/Target/usbh_conf.d \
-./USB_HOST/Target/usbh_platform.d 
-
 OBJS += \
 ./USB_HOST/Target/usbh_conf.o \
 ./USB_HOST/Target/usbh_platform.o 
+
+C_DEPS += \
+./USB_HOST/Target/usbh_conf.d \
+./USB_HOST/Target/usbh_platform.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
