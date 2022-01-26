@@ -109,7 +109,7 @@ int main(void)
   {
 
 	HAL_StatusTypeDef ret;
-	uint8_t *enabled;
+	uint8_t *enabled = NULL;
 	ret = getAutomaticSelfCalibration(&hi2c1, enabled);
 
     /* USER CODE END WHILE */
