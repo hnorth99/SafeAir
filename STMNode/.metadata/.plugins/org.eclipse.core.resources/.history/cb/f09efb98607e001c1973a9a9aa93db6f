@@ -77,9 +77,9 @@ HAL_StatusTypeDef readMeasurment(I2C_HandleTypeDef *hi2x, uint16_t * co2, uint16
 		return ret;
 	}
 
-	uint16_t co2_v = (output_buffer[0]<<8 | output_buffer[1]);
-	uint16_t temp_v = (output_buffer[3]<<8 | output_buffer[4]);
-	uint16_t humidity_v = (output_buffer[6]<<8 | output_buffer[7]);
+	uint16_t co2_v = &(output_buffer[0]<<8 | output_buffer[1]);
+	uint16_t temp_v = &(output_buffer[3]<<8 | output_buffer[4]);
+	uint16_t humidity_v = &(output_buffer[6]<<8 | output_buffer[7]);
 	co2 = &co2_v;
 	temp = &temp_v;
 	humidity = &humidity_v;
