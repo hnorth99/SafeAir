@@ -1521,3 +1521,56 @@ arm-none-eabi-size   STM32F407G-DISC1.elf
   33968	    152	   3600	  37720	   9358	STM32F407G-DISC1.elf
 Finished building: default.size.stdout
  
+20:25:20 **** Incremental Build of configuration Debug for project STM32F407G-DISC1 ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/SCD41.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/SCD41.d" -MT"Core/Src/SCD41.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/SCD41.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:111:20: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+  111 |  HAL_StatusTypeDef ret;
+      |                    ^~~
+../Core/Src/SCD41.c: In function 'readMeasurment':
+../Core/Src/SCD41.c:80:8: error: lvalue required as unary '&' operand
+   80 |  co2 = &(output_buffer[0]<<8 | output_buffer[1]);
+      |        ^
+../Core/Src/SCD41.c:81:9: error: lvalue required as unary '&' operand
+   81 |  temp = &(output_buffer[3]<<8 | output_buffer[4]);
+      |         ^
+../Core/Src/SCD41.c:82:13: error: lvalue required as unary '&' operand
+   82 |  humidity = &(output_buffer[6]<<8 | output_buffer[7]);
+      |             ^
+make: *** [Core/Src/subdir.mk:37: Core/Src/SCD41.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+20:29:25 **** Incremental Build of configuration Debug for project STM32F407G-DISC1 ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/SCD41.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/SCD41.d" -MT"Core/Src/SCD41.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/SCD41.o"
+../Core/Src/SCD41.c: In function 'readMeasurment':
+../Core/Src/SCD41.c:80:19: error: lvalue required as unary '&' operand
+   80 |  uint16_t co2_v = &(output_buffer[0]<<8 | output_buffer[1]);
+      |                   ^
+../Core/Src/SCD41.c:81:20: error: lvalue required as unary '&' operand
+   81 |  uint16_t temp_v = &(output_buffer[3]<<8 | output_buffer[4]);
+      |                    ^
+../Core/Src/SCD41.c:82:24: error: lvalue required as unary '&' operand
+   82 |  uint16_t humidity_v = &(output_buffer[6]<<8 | output_buffer[7]);
+      |                        ^
+make: *** [Core/Src/subdir.mk:37: Core/Src/SCD41.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+20:29:51 **** Incremental Build of configuration Debug for project STM32F407G-DISC1 ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/SCD41.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/SCD41.d" -MT"Core/Src/SCD41.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/SCD41.o"
+arm-none-eabi-gcc -o "STM32F407G-DISC1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\hunte\Documents\SafeAir\STMNode\STM32F407G-DISC1\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F407G-DISC1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F407G-DISC1.elf
+ 
+arm-none-eabi-size   STM32F407G-DISC1.elf 
+arm-none-eabi-objdump -h -S  STM32F407G-DISC1.elf  > "STM32F407G-DISC1.list"
+arm-none-eabi-objcopy  -O binary  STM32F407G-DISC1.elf  "STM32F407G-DISC1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  35124	    152	   3600	  38876	   97dc	STM32F407G-DISC1.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F407G-DISC1.bin
+ 
+Finished building: STM32F407G-DISC1.list
+ 
