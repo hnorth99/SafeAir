@@ -1,3 +1,0 @@
-SCD41.c:12:19:getAutomaticSelfCalibration	32	static
-SCD41.c:39:19:startPeriodicMeasurment	32	static
-SCD41.c:58:19:readMeasurment	56	static
