@@ -21,7 +21,7 @@ void printSerialNumber(uint16_t serial0, uint16_t serial1, uint16_t serial2) {
 
 void setup() {
 
-    Serial.begin(115200);
+    Serial.begin(9600);
     while (!Serial) {
         delay(100);
     }
@@ -75,6 +75,7 @@ void loop() {
     float temperature = 0.0f;
     float humidity = 0.0f;
     error = scd4x.readMeasurement(co2, temperature, humidity);
+
     if (error) {
         Serial.print("Error trying to execute readMeasurement(): ");
         errorToString(error, errorMessage, 256);

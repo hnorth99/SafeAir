@@ -49,7 +49,7 @@ const bool noACK  = false;
 const bool ACK    = true;
 
 // Temperature & humidity equation constants
-  const float DD1  = -40.1;          // for deg C @ 5V
+  const float DD1B  = -40.1;          // for deg C @ 5V
   const float D2h =   0.01;         // for deg C, 14-bit precision
   const float D2l =   0.04;         // for deg C, 12-bit precision
 
@@ -345,9 +345,9 @@ void Sensirion::resetConnection(void) {
 // Calculates temperature in degrees C from raw sensor data
 float Sensirion::calcTemp(uint16_t rawData) {
   if (_stat_reg & LOW_RES)
-    return DD1 + D2l * (float) rawData;
+    return DD1B + D2l * (float) rawData;
   else
-    return DD1 + D2h * (float) rawData;
+    return DD1B + D2h * (float) rawData;
 }
 
 // Calculates relative humidity from raw sensor data
