@@ -14,10 +14,15 @@ import time
 import urllib.request
 import requests
 
+PRINT_FLAG = True
+
 scd41Port = serial.Serial("/dev/rfcomm0", baudrate=9600)
 responseDevicesPort = serial.Serial("/dev/rfcomm1", baudrate=9600)
 
 while True:
+    if (PRINT_FLAG):
+        print("BEGINNING NEW RUN")
+    
     data = read_scd41()
     if valid_data(data):
         timestamp = time.local_time()
@@ -34,13 +39,21 @@ def read_scd41():
     data.append() # HUMIDITY
     data.append() # CO2
     
+    if (PRINT_FLAG):
+        print("Raw serial read: " + serial_read)
+        print("Formatted data: " + data)
     return data
 
 def valid_data(data):
     for num in data:
         if (!isinstance(num, float)):
-            return false
-    return true
+            if (PRINT_FLAG):
+                print("Data deemed invalid: " + num)
+            return False
+    
+    if (PRINT_FLAG):
+                print("Data deemed valid")
+    return True
 
 def climate_response(temp,  humidity, co2):
     response = ""
@@ -49,6 +62,10 @@ def climate_response(temp,  humidity, co2):
     response += ((humidity > 60) ? "1" : "0")
     response += ((co2 > 1500) ? "1" : "0")
     responseDevicesPort.write(str.encode(response))
+          
+    if (PRINT_FLAG):
+        print("Response Format: heater/humidifier/dehumidifier/fan")
+        print("Response       : " + response)
         
 def push_data_to_thingspeak(timestamp, temp,  humidity, co2):
     url = "https://api.thingspeak.com/update?api_key="
@@ -56,3 +73,6 @@ def push_data_to_thingspeak(timestamp, temp,  humidity, co2):
     header = "&Time={}&Temperature={}&Humidity={}&Carbon_Dioxide={}".format(timestamp, temp, humidity, co2)
     final_url = url+key+header
     data = urllib.request.urlopen(final_url)
+          
+    if (PRINT_FLAG):
+        print("Request return: " + data)
