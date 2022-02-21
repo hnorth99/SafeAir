@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>42550299859-1rgfonk181koslal8fmqnn9t5p01olaf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.42550299859-1rgfonk181koslal8fmqnn9t5p01olaf</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCK5f_oQtDnuBhaVFhGErNHvwDdhiFF4Ss</string>
+	<key>GCM_SENDER_ID</key>
+	<string>42550299859</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.SafeAir.SafeAirDevice</string>
+	<key>PROJECT_ID</key>
+	<string>safeairdevice</string>
+	<key>STORAGE_BUCKET</key>
+	<string>safeairdevice.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:42550299859:ios:a1edacbcbe099dd81c5826</string>
+</dict>
+</plist>
