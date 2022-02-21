@@ -11,7 +11,7 @@
 		628532FF27C02A87003B50BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 628532FE27C02A87003B50BC /* GoogleService-Info.plist */; };
 		62E261B727C01AFA00BD3EA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E261B627C01AFA00BD3EA1 /* AppDelegate.swift */; };
 		62E261B927C01AFA00BD3EA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E261B827C01AFA00BD3EA1 /* SceneDelegate.swift */; };
-		62E261BB27C01AFA00BD3EA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E261BA27C01AFA00BD3EA1 /* ViewController.swift */; };
+		62E261BB27C01AFA00BD3EA1 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E261BA27C01AFA00BD3EA1 /* LoginScreen.swift */; };
 		62E261BE27C01AFA00BD3EA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62E261BC27C01AFA00BD3EA1 /* Main.storyboard */; };
 		62E261C027C01AFC00BD3EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62E261BF27C01AFC00BD3EA1 /* Assets.xcassets */; };
 		62E261C327C01AFC00BD3EA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62E261C127C01AFC00BD3EA1 /* LaunchScreen.storyboard */; };
@@ -24,7 +24,7 @@
 		62E261B327C01AFA00BD3EA1 /* SafeAirDevice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeAirDevice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E261B627C01AFA00BD3EA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62E261B827C01AFA00BD3EA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		62E261BA27C01AFA00BD3EA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		62E261BA27C01AFA00BD3EA1 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		62E261BD27C01AFA00BD3EA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62E261BF27C01AFC00BD3EA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62E261C227C01AFC00BD3EA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 				628532FE27C02A87003B50BC /* GoogleService-Info.plist */,
 				62E261B627C01AFA00BD3EA1 /* AppDelegate.swift */,
 				62E261B827C01AFA00BD3EA1 /* SceneDelegate.swift */,
-				62E261BA27C01AFA00BD3EA1 /* ViewController.swift */,
+				62E261BA27C01AFA00BD3EA1 /* LoginScreen.swift */,
 				6285330A27C07E00003B50BC /* ViewModels */,
 				62E261BC27C01AFA00BD3EA1 /* Main.storyboard */,
 				62E261BF27C01AFC00BD3EA1 /* Assets.xcassets */,
@@ -218,7 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62E261BB27C01AFA00BD3EA1 /* ViewController.swift in Sources */,
+				62E261BB27C01AFA00BD3EA1 /* LoginScreen.swift in Sources */,
 				62E261B727C01AFA00BD3EA1 /* AppDelegate.swift in Sources */,
 				62E261B927C01AFA00BD3EA1 /* SceneDelegate.swift in Sources */,
 			);
@@ -370,6 +370,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SafeAirDevice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -398,6 +399,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SafeAirDevice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

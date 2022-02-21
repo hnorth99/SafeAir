@@ -9,9 +9,29 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class ViewController: UIViewController{
+class LoginScreen: UIViewController{
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    @IBOutlet weak var cust_locid: UITextField!
+    
+    @IBAction func cust_login_pressed(_ sender: Any) {
+        let ref = appDelegate.ref
+        let loc_id = cust_locid.text ?? "empty"
+        
+        ref?.child(loc_id + "/humidity").getData(completion:  { error, snapshot in
+          guard error == nil else {
+            print(error!.localizedDescription)
+            return;
+          }
+            let humidity = snapshot.value as? Double ?? 0.005;
+            print(humidity)
+        });
+    }
+}
+    /*
     @IBOutlet weak var tableView: UITableView!
-    var tasks = [String]()
+    var
+     tasks = [String]()
     var ref: DatabaseReference?
     var databaseHandle : DatabaseHandle?
     var postData = [String]()
@@ -207,10 +227,9 @@ class ViewController: UIViewController{
         present(alert, animated: true)
     }
 
+*/
 
-}
-/*
-    
+    /*
 extension ViewController: UITableViewDelegate {
 
     func tableView(_tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -231,4 +250,4 @@ extension ViewController: UITableViewDataSource {
     }
     
 }
-*/ 
+     */
