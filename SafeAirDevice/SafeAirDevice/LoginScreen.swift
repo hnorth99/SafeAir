@@ -23,8 +23,8 @@ class LoginScreen: UIViewController{
             print(error!.localizedDescription)
             return;
           }
-            let humidity = snapshot.value as? Double ?? 0.005;
-            print(humidity)
+            let response = snapshot.value as? Double ?? -1;
+            print(response)
         });
     }
 }
