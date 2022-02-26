@@ -11,6 +11,7 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var ref: DatabaseReference!
+    var location:String!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()

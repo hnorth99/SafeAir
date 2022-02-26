@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		34B484B999C84B0602941055 /* Pods_SafeAirDevice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F7C10DB612F7B70F7E4F07 /* Pods_SafeAirDevice.framework */; };
+		626C90A927C814CE001F9F23 /* LocationMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C90A827C814CE001F9F23 /* LocationMetrics.swift */; };
 		628532FF27C02A87003B50BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 628532FE27C02A87003B50BC /* GoogleService-Info.plist */; };
 		62E261B727C01AFA00BD3EA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E261B627C01AFA00BD3EA1 /* AppDelegate.swift */; };
 		62E261B927C01AFA00BD3EA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E261B827C01AFA00BD3EA1 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		1957340356B43BC13F55705A /* Pods-SafeAirDevice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeAirDevice.release.xcconfig"; path = "Target Support Files/Pods-SafeAirDevice/Pods-SafeAirDevice.release.xcconfig"; sourceTree = "<group>"; };
 		556C1A6712166DD3BA3BE014 /* Pods-SafeAirDevice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeAirDevice.debug.xcconfig"; path = "Target Support Files/Pods-SafeAirDevice/Pods-SafeAirDevice.debug.xcconfig"; sourceTree = "<group>"; };
+		626C90A827C814CE001F9F23 /* LocationMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMetrics.swift; sourceTree = "<group>"; };
 		628532FE27C02A87003B50BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		62E261B327C01AFA00BD3EA1 /* SafeAirDevice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeAirDevice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E261B627C01AFA00BD3EA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				62E261B627C01AFA00BD3EA1 /* AppDelegate.swift */,
 				62E261B827C01AFA00BD3EA1 /* SceneDelegate.swift */,
 				62E261BA27C01AFA00BD3EA1 /* LoginScreen.swift */,
+				626C90A827C814CE001F9F23 /* LocationMetrics.swift */,
 				6285330A27C07E00003B50BC /* ViewModels */,
 				62E261BC27C01AFA00BD3EA1 /* Main.storyboard */,
 				62E261BF27C01AFC00BD3EA1 /* Assets.xcassets */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				626C90A927C814CE001F9F23 /* LocationMetrics.swift in Sources */,
 				62E261BB27C01AFA00BD3EA1 /* LoginScreen.swift in Sources */,
 				62E261B727C01AFA00BD3EA1 /* AppDelegate.swift in Sources */,
 				62E261B927C01AFA00BD3EA1 /* SceneDelegate.swift in Sources */,
