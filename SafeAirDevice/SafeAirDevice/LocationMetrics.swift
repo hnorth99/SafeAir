@@ -32,10 +32,28 @@ class LocationMetrics: UIViewController {
         appDelegate.ref.child(appDelegate.location).observe(DataEventType.value, with: {
                 (snapshot) in
             let dict = snapshot.value as? NSDictionary
-            self.capacityLabel.text = String(dict?["capacity"] as? Double ?? 0.0)
-            self.tempLabel.text = String(dict?["temperature"] as? Double ?? 0.0)
-            self.humidityLabel.text = String(dict?["humidity"] as? Double ?? 0.0)
-            self.co2Label.text = String(dict?["co2"] as? Double ?? 0.0)
+            let capacity = dict?["capacity"] as? Double ?? 0.0
+            let temperature = dict?["temperature"] as? Double ?? 0.0
+            let humidity = dict?["humidity"] as? Double ?? 0.0
+            let co2 = dict?["co2"] as? Double ?? 0.0
+            
+            self.capacityLabel.text = String(capacity)
+            self.tempLabel.text = String(temperature)
+            self.humidityLabel.text = String(humidity)
+            self.co2Label.text = String(co2)
+            
+            if (capacity > 1) {
+                capacityLabel.textColor = UIColor.red
+            }
+            if (temperature < 11) {
+                tempLabel.textColor = UIColor.red
+            }
+            if (humidity < 40 || humidity > 60) {
+                humidityLabel.textColor = UIColor.red
+            }
+            if (co2 > 1500) {
+                co2Label.textColor = UIColor.red
+            }
         }
         )
         
