@@ -43,16 +43,24 @@ class LocationMetrics: UIViewController {
             self.co2Label.text = String(co2)
             
             if (capacity > 1) {
-                capacityLabel.textColor = UIColor.red
+                self.capacityLabel.textColor = UIColor.red
+            } else {
+                self.capacityLabel.textColor = UIColor.green
             }
             if (temperature < 11) {
-                tempLabel.textColor = UIColor.red
+                self.tempLabel.textColor = UIColor.red
+            } else {
+                self.tempLabel.textColor = UIColor.green
             }
             if (humidity < 40 || humidity > 60) {
-                humidityLabel.textColor = UIColor.red
+                self.humidityLabel.textColor = UIColor.red
+            } else {
+                self.humidityLabel.textColor = UIColor.green
             }
             if (co2 > 1500) {
-                co2Label.textColor = UIColor.red
+                self.co2Label.textColor = UIColor.red
+            } else {
+                self.co2Label.textColor = UIColor.green
             }
         }
         )

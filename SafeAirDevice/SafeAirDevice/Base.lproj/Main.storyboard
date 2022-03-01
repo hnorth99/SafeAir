@@ -252,6 +252,9 @@
                                                 <state key="normal" title="Capacity:">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="7T2-xk-nTE" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="BoT-6m-szg"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8t-Sk-rr0">
                                                 <rect key="frame" x="202" y="10" width="182" height="90.5"/>
@@ -285,9 +288,12 @@
                                                 <rect key="frame" x="10" y="10" width="182" height="90"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="27"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Temperature">
+                                                <state key="normal" title="Temperature:">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="O0t-7Y-ncG" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="I0b-kw-AKf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93333333730000001" green="0.93333333730000001" blue="0.93333333730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -315,9 +321,12 @@
                                                 <rect key="frame" x="10" y="10" width="182" height="90.5"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="27"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Humidity">
+                                                <state key="normal" title="Humidity:">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="s5u-1q-868" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="o7Z-L8-3tE"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93333333730000001" green="0.93333333730000001" blue="0.93333333730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -339,9 +348,12 @@
                                                 <rect key="frame" x="10" y="10" width="182" height="90"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="27"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="CO2">
+                                                <state key="normal" title="CO2:">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="vIk-mY-F6h" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="BcT-Nm-8iI"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyS-HU-ylU">
                                                 <rect key="frame" x="202" y="38.5" width="182" height="32.5"/>
@@ -425,6 +437,138 @@
             </objects>
             <point key="canvasLocation" x="1889.8550724637682" y="-470.08928571428567"/>
         </scene>
+        <!--Cap Chart View Controller-->
+        <scene sceneID="FjL-UG-9JQ">
+            <objects>
+                <viewController id="7T2-xk-nTE" customClass="CapChartViewController" customModule="SafeAirDevice" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TCb-E4-H34" customClass="CapacityChartViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nx4-vL-9VO">
+                                <rect key="frame" x="20" y="811" width="56" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Back">
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.93333333730000001" green="0.93333333730000001" blue="0.93333333730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="K0c-oJ-bq6" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="slg-1O-Onv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E4s-zu-5Dv"/>
+                        <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nx4-vL-9VO" firstAttribute="leading" secondItem="E4s-zu-5Dv" secondAttribute="leading" constant="20" id="uTp-dR-IWF"/>
+                            <constraint firstItem="E4s-zu-5Dv" firstAttribute="bottom" secondItem="nx4-vL-9VO" secondAttribute="bottom" constant="20" id="vZU-yp-j54"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="J6C-Dq-KRN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="drS-lg-OJT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2922" y="-1343"/>
+        </scene>
+        <!--Temp Chart View Controller-->
+        <scene sceneID="49o-te-bal">
+            <objects>
+                <viewController id="O0t-7Y-ncG" customClass="TempChartViewController" customModule="SafeAirDevice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YqQ-8v-iDc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLx-ca-KGa">
+                                <rect key="frame" x="20" y="811" width="56" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Back">
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.93333333730000001" green="0.93333333730000001" blue="0.93333333730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="K0c-oJ-bq6" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ykQ-mD-uOG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0au-kY-Zrp"/>
+                        <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0au-kY-Zrp" firstAttribute="bottom" secondItem="CLx-ca-KGa" secondAttribute="bottom" constant="20" id="aqW-oM-OcG"/>
+                            <constraint firstItem="CLx-ca-KGa" firstAttribute="leading" secondItem="0au-kY-Zrp" secondAttribute="leading" constant="20" id="lxH-xT-VIH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BQK-gB-PSj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QxF-NW-MLX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2922" y="-685"/>
+        </scene>
+        <!--Humid Chart View Controller-->
+        <scene sceneID="Ujf-PG-Pqe">
+            <objects>
+                <viewController id="s5u-1q-868" customClass="HumidChartViewController" customModule="SafeAirDevice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eKG-cv-Ox7" customClass="HumidChartViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDp-aH-e95">
+                                <rect key="frame" x="20" y="811" width="56" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Back">
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.93333333730000001" green="0.93333333730000001" blue="0.93333333730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="K0c-oJ-bq6" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="y8s-b2-tJq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UG9-Lj-oTb"/>
+                        <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aDp-aH-e95" firstAttribute="leading" secondItem="UG9-Lj-oTb" secondAttribute="leading" constant="20" id="Wc8-Rf-SDd"/>
+                            <constraint firstItem="UG9-Lj-oTb" firstAttribute="bottom" secondItem="aDp-aH-e95" secondAttribute="bottom" constant="20" id="u7b-0g-bRt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nLw-uV-rIF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="99I-Fh-1Lr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2922" y="-33"/>
+        </scene>
+        <!--Co2 Chart View Controller-->
+        <scene sceneID="UxU-JU-g6s">
+            <objects>
+                <viewController id="vIk-mY-F6h" customClass="Co2ChartViewController" customModule="SafeAirDevice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vau-vX-Vzz" customClass="Co2ChartViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CT-8o-jyB">
+                                <rect key="frame" x="20" y="811" width="56" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Back">
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.93333333730000001" green="0.93333333730000001" blue="0.93333333730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="K0c-oJ-bq6" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="CZn-yZ-V4T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="79c-fw-MD6"/>
+                        <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="79c-fw-MD6" firstAttribute="bottom" secondItem="2CT-8o-jyB" secondAttribute="bottom" constant="20" id="PCD-Lu-wM6"/>
+                            <constraint firstItem="2CT-8o-jyB" firstAttribute="leading" secondItem="79c-fw-MD6" secondAttribute="leading" constant="20" id="Vb4-ct-GMt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mif-wA-6AY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rox-gr-Wa1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2922" y="601"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="x96-ZF-PnI">
             <objects>
@@ -445,6 +589,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="BcT-Nm-8iI"/>
+        <segue reference="CZn-yZ-V4T"/>
         <segue reference="izA-7j-hvL"/>
     </inferredMetricsTieBreakers>
     <resources>
