@@ -446,7 +446,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nx4-vL-9VO">
-                                <rect key="frame" x="20" y="811" width="56" height="31"/>
+                                <rect key="frame" x="20" y="64" width="56" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Back">
                                     <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -456,12 +456,51 @@
                                     <segue destination="K0c-oJ-bq6" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="slg-1O-Onv"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uhg-Qa-X0w">
+                                <rect key="frame" x="0.0" y="692" width="414" height="150"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Report Issue to Owner:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ja-vX-KJk">
+                                        <rect key="frame" x="120" y="10" width="174" height="22"/>
+                                        <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoU-Up-G50">
+                                        <rect key="frame" x="178" y="62" width="58" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Send">
+                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" red="0.93333333730000001" green="0.93333333730000001" blue="0.93333333730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="5Ja-vX-KJk" firstAttribute="centerX" secondItem="Uhg-Qa-X0w" secondAttribute="centerX" id="1Ux-g9-RXf"/>
+                                    <constraint firstItem="BoU-Up-G50" firstAttribute="centerX" secondItem="Uhg-Qa-X0w" secondAttribute="centerX" id="KcG-gU-cjB"/>
+                                    <constraint firstItem="5Ja-vX-KJk" firstAttribute="top" secondItem="Uhg-Qa-X0w" secondAttribute="top" constant="10" id="Pgj-zb-CKu"/>
+                                    <constraint firstItem="BoU-Up-G50" firstAttribute="top" secondItem="5Ja-vX-KJk" secondAttribute="bottom" constant="30" id="aR3-et-3lu"/>
+                                    <constraint firstAttribute="height" constant="150" id="mPT-t0-3tl"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="       7d          6d        5d         4d        3d         2d          1d" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LAX-WB-eZY">
+                                <rect key="frame" x="0.0" y="653.5" width="414" height="18.5"/>
+                                <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E4s-zu-5Dv"/>
                         <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nx4-vL-9VO" firstAttribute="leading" secondItem="E4s-zu-5Dv" secondAttribute="leading" constant="20" id="uTp-dR-IWF"/>
-                            <constraint firstItem="E4s-zu-5Dv" firstAttribute="bottom" secondItem="nx4-vL-9VO" secondAttribute="bottom" constant="20" id="vZU-yp-j54"/>
+                            <constraint firstItem="nx4-vL-9VO" firstAttribute="leading" secondItem="E4s-zu-5Dv" secondAttribute="leading" constant="20" id="3at-KQ-DRj"/>
+                            <constraint firstItem="E4s-zu-5Dv" firstAttribute="bottom" secondItem="Uhg-Qa-X0w" secondAttribute="bottom" constant="20" id="42r-lS-K8A"/>
+                            <constraint firstItem="E4s-zu-5Dv" firstAttribute="trailing" secondItem="Uhg-Qa-X0w" secondAttribute="trailing" id="74v-Th-HXy"/>
+                            <constraint firstItem="nx4-vL-9VO" firstAttribute="top" secondItem="E4s-zu-5Dv" secondAttribute="top" constant="20" id="Am6-E9-i6T"/>
+                            <constraint firstItem="LAX-WB-eZY" firstAttribute="leading" secondItem="E4s-zu-5Dv" secondAttribute="leading" id="OGo-EA-F03"/>
+                            <constraint firstItem="Uhg-Qa-X0w" firstAttribute="top" secondItem="LAX-WB-eZY" secondAttribute="bottom" constant="20" id="cnH-ys-7xy"/>
+                            <constraint firstItem="Uhg-Qa-X0w" firstAttribute="leading" secondItem="E4s-zu-5Dv" secondAttribute="leading" id="thV-9B-2W5"/>
+                            <constraint firstAttribute="trailing" secondItem="LAX-WB-eZY" secondAttribute="trailing" id="vh2-33-l6k"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="J6C-Dq-KRN"/>
@@ -479,7 +518,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLx-ca-KGa">
-                                <rect key="frame" x="20" y="811" width="56" height="31"/>
+                                <rect key="frame" x="20" y="64" width="56" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Back">
                                     <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -489,11 +528,50 @@
                                     <segue destination="K0c-oJ-bq6" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ykQ-mD-uOG"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ggk-X7-gdr">
+                                <rect key="frame" x="0.0" y="692" width="414" height="150"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Report Issue to Owner:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qib-Qs-nlG">
+                                        <rect key="frame" x="120" y="10" width="174" height="22"/>
+                                        <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3O-TI-Ogr">
+                                        <rect key="frame" x="178" y="62" width="58" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Send">
+                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" red="0.93333333730000001" green="0.93333333730000001" blue="0.93333333730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="OXJ-68-la5"/>
+                                    <constraint firstItem="O3O-TI-Ogr" firstAttribute="centerX" secondItem="Ggk-X7-gdr" secondAttribute="centerX" id="QvA-Xp-ung"/>
+                                    <constraint firstItem="qib-Qs-nlG" firstAttribute="centerX" secondItem="Ggk-X7-gdr" secondAttribute="centerX" id="a91-mE-T0y"/>
+                                    <constraint firstItem="qib-Qs-nlG" firstAttribute="top" secondItem="Ggk-X7-gdr" secondAttribute="top" constant="10" id="iWm-NG-JDK"/>
+                                    <constraint firstItem="O3O-TI-Ogr" firstAttribute="top" secondItem="qib-Qs-nlG" secondAttribute="bottom" constant="30" id="npl-9L-qQV"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="       7d          6d        5d         4d        3d         2d          1d" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cZm-RA-kV9">
+                                <rect key="frame" x="0.0" y="653.5" width="414" height="18.5"/>
+                                <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0au-kY-Zrp"/>
                         <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0au-kY-Zrp" firstAttribute="bottom" secondItem="CLx-ca-KGa" secondAttribute="bottom" constant="20" id="aqW-oM-OcG"/>
+                            <constraint firstItem="0au-kY-Zrp" firstAttribute="bottom" secondItem="Ggk-X7-gdr" secondAttribute="bottom" constant="20" id="2ou-GI-MRu"/>
+                            <constraint firstItem="Ggk-X7-gdr" firstAttribute="leading" secondItem="YqQ-8v-iDc" secondAttribute="leading" id="701-cQ-ed2"/>
+                            <constraint firstItem="0au-kY-Zrp" firstAttribute="trailing" secondItem="Ggk-X7-gdr" secondAttribute="trailing" id="C8j-sp-rfI"/>
+                            <constraint firstItem="CLx-ca-KGa" firstAttribute="top" secondItem="0au-kY-Zrp" secondAttribute="top" constant="20" id="MGx-X4-9od"/>
+                            <constraint firstItem="Ggk-X7-gdr" firstAttribute="top" secondItem="cZm-RA-kV9" secondAttribute="bottom" constant="20" id="ZTK-zc-AUD"/>
+                            <constraint firstAttribute="trailing" secondItem="cZm-RA-kV9" secondAttribute="trailing" id="eev-MN-3sK"/>
+                            <constraint firstItem="cZm-RA-kV9" firstAttribute="leading" secondItem="0au-kY-Zrp" secondAttribute="leading" id="ivy-hm-wa1"/>
                             <constraint firstItem="CLx-ca-KGa" firstAttribute="leading" secondItem="0au-kY-Zrp" secondAttribute="leading" constant="20" id="lxH-xT-VIH"/>
                         </constraints>
                     </view>
@@ -512,7 +590,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDp-aH-e95">
-                                <rect key="frame" x="20" y="811" width="56" height="31"/>
+                                <rect key="frame" x="20" y="64" width="56" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Back">
                                     <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -522,12 +600,52 @@
                                     <segue destination="K0c-oJ-bq6" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="y8s-b2-tJq"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fQ-OX-80G">
+                                <rect key="frame" x="0.0" y="692" width="414" height="150"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Report Issue to Owner:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SZl-6m-S5W">
+                                        <rect key="frame" x="120" y="10" width="174" height="22"/>
+                                        <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMC-FR-R7S">
+                                        <rect key="frame" x="178" y="62" width="58" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Send">
+                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" red="0.93333333730000001" green="0.93333333730000001" blue="0.93333333730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="UMC-FR-R7S" firstAttribute="top" secondItem="SZl-6m-S5W" secondAttribute="bottom" constant="30" id="1Lm-14-ZcU"/>
+                                    <constraint firstItem="SZl-6m-S5W" firstAttribute="centerX" secondItem="5fQ-OX-80G" secondAttribute="centerX" id="F7K-5V-8Yo"/>
+                                    <constraint firstItem="UMC-FR-R7S" firstAttribute="centerX" secondItem="5fQ-OX-80G" secondAttribute="centerX" id="NMQ-hy-PP1"/>
+                                    <constraint firstAttribute="height" constant="150" id="Ox8-Nc-cPN"/>
+                                    <constraint firstItem="SZl-6m-S5W" firstAttribute="top" secondItem="5fQ-OX-80G" secondAttribute="top" constant="10" id="Sq3-RQ-Fc7"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="       7d          6d        5d         4d        3d         2d          1d" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wvZ-N4-DQ6">
+                                <rect key="frame" x="0.0" y="653.5" width="414" height="18.5"/>
+                                <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UG9-Lj-oTb"/>
                         <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="UG9-Lj-oTb" firstAttribute="bottom" secondItem="5fQ-OX-80G" secondAttribute="bottom" constant="20" id="06h-0w-vov"/>
+                            <constraint firstItem="aDp-aH-e95" firstAttribute="top" secondItem="UG9-Lj-oTb" secondAttribute="top" constant="20" id="1ka-M4-N05"/>
+                            <constraint firstItem="5fQ-OX-80G" firstAttribute="leading" secondItem="UG9-Lj-oTb" secondAttribute="leading" id="1ta-V2-SEo"/>
+                            <constraint firstAttribute="trailing" secondItem="5fQ-OX-80G" secondAttribute="trailing" id="KVB-YY-RSn"/>
+                            <constraint firstItem="wvZ-N4-DQ6" firstAttribute="centerX" secondItem="eKG-cv-Ox7" secondAttribute="centerX" id="TeL-00-nfS"/>
+                            <constraint firstItem="UG9-Lj-oTb" firstAttribute="trailing" secondItem="wvZ-N4-DQ6" secondAttribute="trailing" id="Tq0-q8-MdK"/>
+                            <constraint firstItem="5fQ-OX-80G" firstAttribute="top" secondItem="wvZ-N4-DQ6" secondAttribute="bottom" constant="20" id="VuB-VV-sT6"/>
                             <constraint firstItem="aDp-aH-e95" firstAttribute="leading" secondItem="UG9-Lj-oTb" secondAttribute="leading" constant="20" id="Wc8-Rf-SDd"/>
-                            <constraint firstItem="UG9-Lj-oTb" firstAttribute="bottom" secondItem="aDp-aH-e95" secondAttribute="bottom" constant="20" id="u7b-0g-bRt"/>
+                            <constraint firstItem="wvZ-N4-DQ6" firstAttribute="leading" secondItem="UG9-Lj-oTb" secondAttribute="leading" id="z0A-gW-WQp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nLw-uV-rIF"/>
@@ -545,7 +663,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CT-8o-jyB">
-                                <rect key="frame" x="20" y="811" width="56" height="31"/>
+                                <rect key="frame" x="20" y="64" width="56" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Back">
                                     <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -555,12 +673,51 @@
                                     <segue destination="K0c-oJ-bq6" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="CZn-yZ-V4T"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r05-fy-aL9">
+                                <rect key="frame" x="0.0" y="692" width="414" height="150"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Report Issue to Owner:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LwQ-z8-v1O">
+                                        <rect key="frame" x="120" y="10" width="174" height="22"/>
+                                        <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8c-lH-fwT">
+                                        <rect key="frame" x="178" y="62" width="58" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Send">
+                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" red="0.93333333730000001" green="0.93333333730000001" blue="0.93333333730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="LT2-ry-hyV"/>
+                                    <constraint firstItem="LwQ-z8-v1O" firstAttribute="centerX" secondItem="r05-fy-aL9" secondAttribute="centerX" id="awO-qw-pxn"/>
+                                    <constraint firstItem="P8c-lH-fwT" firstAttribute="centerX" secondItem="r05-fy-aL9" secondAttribute="centerX" id="mhy-tQ-er0"/>
+                                    <constraint firstItem="LwQ-z8-v1O" firstAttribute="top" secondItem="r05-fy-aL9" secondAttribute="top" constant="10" id="nJL-hL-DLA"/>
+                                    <constraint firstItem="P8c-lH-fwT" firstAttribute="top" secondItem="LwQ-z8-v1O" secondAttribute="bottom" constant="30" id="qIX-s9-8z8"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="       7d          6d        5d         4d        3d         2d          1d" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="60x-QX-b8T">
+                                <rect key="frame" x="0.0" y="653.5" width="414" height="18.5"/>
+                                <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="79c-fw-MD6"/>
                         <color key="backgroundColor" red="0.64174240829999996" green="0.76042407749999996" blue="0.95601373909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="79c-fw-MD6" firstAttribute="bottom" secondItem="2CT-8o-jyB" secondAttribute="bottom" constant="20" id="PCD-Lu-wM6"/>
+                            <constraint firstAttribute="trailing" secondItem="r05-fy-aL9" secondAttribute="trailing" id="5vA-NW-8VP"/>
+                            <constraint firstItem="r05-fy-aL9" firstAttribute="top" secondItem="60x-QX-b8T" secondAttribute="bottom" constant="20" id="9yy-GH-80h"/>
+                            <constraint firstItem="79c-fw-MD6" firstAttribute="bottom" secondItem="r05-fy-aL9" secondAttribute="bottom" constant="20" id="AcE-tU-UVi"/>
+                            <constraint firstItem="79c-fw-MD6" firstAttribute="trailing" secondItem="60x-QX-b8T" secondAttribute="trailing" id="MWq-WA-PrY"/>
+                            <constraint firstItem="2CT-8o-jyB" firstAttribute="top" secondItem="79c-fw-MD6" secondAttribute="top" constant="20" id="QHs-5u-X4B"/>
                             <constraint firstItem="2CT-8o-jyB" firstAttribute="leading" secondItem="79c-fw-MD6" secondAttribute="leading" constant="20" id="Vb4-ct-GMt"/>
+                            <constraint firstItem="r05-fy-aL9" firstAttribute="leading" secondItem="79c-fw-MD6" secondAttribute="leading" id="VmF-JB-I5Y"/>
+                            <constraint firstItem="60x-QX-b8T" firstAttribute="leading" secondItem="Vau-vX-Vzz" secondAttribute="leading" id="fFq-lP-Zd4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mif-wA-6AY"/>
@@ -589,8 +746,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BcT-Nm-8iI"/>
-        <segue reference="CZn-yZ-V4T"/>
+        <segue reference="slg-1O-Onv"/>
         <segue reference="izA-7j-hvL"/>
     </inferredMetricsTieBreakers>
     <resources>

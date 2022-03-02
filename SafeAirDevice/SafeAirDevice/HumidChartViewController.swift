@@ -12,6 +12,7 @@ import Foundation
 import FirebaseAuth
 import FirebaseDatabase
 class HumidChartViewController: UIViewController, ChartViewDelegate {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
 
     var lineChart = LineChartView()
@@ -26,18 +27,27 @@ class HumidChartViewController: UIViewController, ChartViewDelegate {
                                  height: self.view.frame.size.width)
         lineChart.center = view.center
         view.addSubview(lineChart)
-        
-
-        var entries = [ChartDataEntry]()
-        for x in 0..<10 {
-            entries.append(ChartDataEntry(x: Double(x), y: Double(x)))
+        var test = [ChartDataEntry]()
+        var entries = [Double]()
+        appDelegate.ref.child("HunterApt").getData(completion: { error, snapshot in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return;
+            }
+            let entries = snapshot.value as? NSDictionary
+            let humid = entries?["humidity"] as? [Double] ?? [0.0005]
+            var time = entries?["time"] as? [NSString] ?? [""]
+            for x in 0..<humid.count {
+                test.append(ChartDataEntry(x: Double(x-70), y: Double(humid[x])))
+            }
+            self.lineChart.xAxis.drawLabelsEnabled = false
+            self.lineChart.rightAxis.drawLabelsEnabled = false
+            self.lineChart.legend.enabled = false
+            let set = LineChartDataSet(entries: test)
+            set.colors = ChartColorTemplates.material()
+            let data = LineChartData(dataSet: set)
+            self.lineChart.data = data
         }
-        let set = LineChartDataSet(entries: entries)
-        set.colors = ChartColorTemplates.material()
-        lineChart.gridBackgroundColor = UIColor.darkGray
-
-        let data = LineChartData(dataSet: set)
-        self.lineChart.data  =  data
-
+        )
     }
 }
