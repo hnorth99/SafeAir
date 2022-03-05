@@ -16,7 +16,9 @@ import FirebaseDatabase
 class OwnerHumidChartViewController: UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var currentHumidConst: UILabel!
+    @IBOutlet weak var currentHumidMinConst: UILabel!
     @IBOutlet weak var editMaxHum: UITextField!
+    @IBOutlet weak var editMinHum: UITextField!
     @IBOutlet weak var HumComp: UILabel!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var lineChart = LineChartView()
@@ -53,6 +55,9 @@ class OwnerHumidChartViewController: UIViewController, ChartViewDelegate {
             
             let humConst = entries? ["humidity_max"] as? String ?? ""
             self.currentHumidConst.text = String(humConst)
+            let humMinConst = entries? ["humidity_min"] as? String ?? ""
+            self.currentHumidMinConst.text = String(humMinConst)
+            
             var time = entries?["time"] as? [NSString] ?? [""]
             for x in 0..<70 {
                 test.append(ChartDataEntry(x: Double(x-70), y: Double(humid[x])))
@@ -77,5 +82,8 @@ class OwnerHumidChartViewController: UIViewController, ChartViewDelegate {
     
     @IBAction func apply_pressed(_ sender: Any) {
         appDelegate.ref.child("HunterApt").child("humidity_max").setValue(editMaxHum.text);
+    }
+    @IBAction func apply_min_pressed(_ sender: Any) {
+        appDelegate.ref.child("HunterApt").child("humidity_min").setValue(editMinHum.text);
     }
 }
