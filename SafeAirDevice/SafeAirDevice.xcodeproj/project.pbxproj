@@ -20,6 +20,10 @@
 		62E261BE27C01AFA00BD3EA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62E261BC27C01AFA00BD3EA1 /* Main.storyboard */; };
 		62E261C027C01AFC00BD3EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62E261BF27C01AFC00BD3EA1 /* Assets.xcassets */; };
 		62E261C327C01AFC00BD3EA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62E261C127C01AFC00BD3EA1 /* LaunchScreen.storyboard */; };
+		62F2727927D2B3C400D27AE6 /* OwnerTempChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F2727827D2B3C400D27AE6 /* OwnerTempChartViewController.swift */; };
+		62F2727B27D2B76100D27AE6 /* OwnerCapChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F2727A27D2B76100D27AE6 /* OwnerCapChartViewController.swift */; };
+		62F2727D27D2BA1000D27AE6 /* OwnerHumidChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F2727C27D2BA1000D27AE6 /* OwnerHumidChartViewController.swift */; };
+		62F2727F27D2BCC500D27AE6 /* OwnerCo2ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F2727E27D2BCC500D27AE6 /* OwnerCo2ChartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		62E261BF27C01AFC00BD3EA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62E261C227C01AFC00BD3EA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62E261C427C01AFC00BD3EA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62F2727827D2B3C400D27AE6 /* OwnerTempChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerTempChartViewController.swift; sourceTree = "<group>"; };
+		62F2727A27D2B76100D27AE6 /* OwnerCapChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCapChartViewController.swift; sourceTree = "<group>"; };
+		62F2727C27D2BA1000D27AE6 /* OwnerHumidChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerHumidChartViewController.swift; sourceTree = "<group>"; };
+		62F2727E27D2BCC500D27AE6 /* OwnerCo2ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCo2ChartViewController.swift; sourceTree = "<group>"; };
 		F2F7C10DB612F7B70F7E4F07 /* Pods_SafeAirDevice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeAirDevice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,8 +99,12 @@
 				621F305627CD9F390032328C /* HumidChartViewController.swift */,
 				621F305827CDA1750032328C /* Co2ChartViewController.swift */,
 				621F305C27CDA1F70032328C /* CapChartViewController.swift */,
-				6285330A27C07E00003B50BC /* ViewModels */,
+				62F2727A27D2B76100D27AE6 /* OwnerCapChartViewController.swift */,
+				62F2727C27D2BA1000D27AE6 /* OwnerHumidChartViewController.swift */,
 				62E261BC27C01AFA00BD3EA1 /* Main.storyboard */,
+				62F2727E27D2BCC500D27AE6 /* OwnerCo2ChartViewController.swift */,
+				62F2727827D2B3C400D27AE6 /* OwnerTempChartViewController.swift */,
+				6285330A27C07E00003B50BC /* ViewModels */,
 				62E261BF27C01AFC00BD3EA1 /* Assets.xcassets */,
 				62E261C127C01AFC00BD3EA1 /* LaunchScreen.storyboard */,
 				62E261C427C01AFC00BD3EA1 /* Info.plist */,
@@ -237,10 +249,14 @@
 				621F305927CDA1750032328C /* Co2ChartViewController.swift in Sources */,
 				621F305727CD9F390032328C /* HumidChartViewController.swift in Sources */,
 				62E261BB27C01AFA00BD3EA1 /* LoginScreen.swift in Sources */,
+				62F2727F27D2BCC500D27AE6 /* OwnerCo2ChartViewController.swift in Sources */,
+				62F2727927D2B3C400D27AE6 /* OwnerTempChartViewController.swift in Sources */,
 				621F305D27CDA1F70032328C /* CapChartViewController.swift in Sources */,
+				62F2727B27D2B76100D27AE6 /* OwnerCapChartViewController.swift in Sources */,
 				62E261B727C01AFA00BD3EA1 /* AppDelegate.swift in Sources */,
 				621F305527CD74DB0032328C /* TempChartViewController.swift in Sources */,
 				62E261B927C01AFA00BD3EA1 /* SceneDelegate.swift in Sources */,
+				62F2727D27D2BA1000D27AE6 /* OwnerHumidChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
