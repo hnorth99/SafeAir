@@ -658,8 +658,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humid vs. Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHj-ST-qmb">
-                                <rect key="frame" x="148" y="194" width="118" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity vs. Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHj-ST-qmb">
+                                <rect key="frame" x="138.5" y="194" width="137" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1601,7 +1601,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="0ur-xZ-kya"/>
-        <segue reference="CZn-yZ-V4T"/>
+        <segue reference="y8s-b2-tJq"/>
         <segue reference="Uaj-eO-ZQH"/>
     </inferredMetricsTieBreakers>
     <resources>

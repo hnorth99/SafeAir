@@ -38,7 +38,7 @@ class LocationMetrics: UIViewController {
             // The following converts the data receieved as a snapshot to an NSDicitionary.
             let dict = snapshot.value as? NSDictionary
             
-            let capacity = dict?["maxcapacity"] as? Double ?? 0.0
+            let capacity = dict?["currentcapacity"] as? Double ?? 0.0
             //let temperature = dict?["temperature"] as? Double ?? 0.0
             let temperature = dict?["temperature"] as? [Double] ?? [0.0]
             //let humidity = dict?["humidity"] as? Double ?? 0.0
