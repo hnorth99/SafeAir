@@ -1,0 +1,36 @@
+15:10:15 **** Incremental Build of configuration Debug for project CapacityCounter ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:179:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  179 |   sprintf(buffer, "%ld", capacity);
+      |   ^~~~~~~
+../Core/Src/main.c:179:3: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/main.c:23:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   22 | #include "string.h"
+  +++ |+#include <stdio.h>
+   23 | 
+../Core/Src/main.c:179:22: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'int' [-Wformat=]
+  179 |   sprintf(buffer, "%ld", capacity);
+      |                    ~~^   ~~~~~~~~
+      |                      |   |
+      |                      |   int
+      |                      long int
+      |                    %d
+arm-none-eabi-gcc -o "CapacityCounter.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\hunte\Documents\SafeAir\STMNode\CapacityCounter\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CapacityCounter.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CapacityCounter.elf
+ 
+arm-none-eabi-size   CapacityCounter.elf 
+arm-none-eabi-objdump -h -S  CapacityCounter.elf  > "CapacityCounter.list"
+arm-none-eabi-objcopy  -O binary  CapacityCounter.elf  "CapacityCounter.bin"
+   text	   data	    bss	    dec	    hex	filename
+  36168	    152	   3672	  39992	   9c38	CapacityCounter.elf
+Finished building: default.size.stdout
+ 
+Finished building: CapacityCounter.bin
+ 
+Finished building: CapacityCounter.list
+ 
+
+15:10:16 Build Finished. 0 errors, 3 warnings. (took 1s.63ms)
+
