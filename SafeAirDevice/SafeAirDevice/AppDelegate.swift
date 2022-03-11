@@ -1,9 +1,6 @@
-//
 //  AppDelegate.swift
 //  SafeAirDevice
-//
 //  Created by Rafka Daou on 2/18/22.
-//
 
 import UIKit
 import Firebase

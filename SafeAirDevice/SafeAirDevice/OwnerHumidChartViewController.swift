@@ -1,10 +1,8 @@
-//
 //  OwnerHumidChartViewController.swift
 //  SafeAirDevice
-//
 //  Created by Rafka Daou on 3/4/22.
-//
 
+// The following are packages imported for this program.
 import UIKit
 import UIKit
 import Charts
@@ -13,13 +11,17 @@ import Foundation
 import FirebaseAuth
 import FirebaseDatabase
 
+// The OwnerHumidChartViewController is designed to display the historic metrics of the humidity measurements. These measurements are fetched from the firebase real-time database and then displayed as a line chart. In addition
+// the owner has the able to see customer complaints as well as edit the constraints that serve as predefined setpoints to regulating external devices.
 class OwnerHumidChartViewController: UIViewController, ChartViewDelegate {
-    
+    // The following code initializes UILabels and TextFields for this
+    // program.
     @IBOutlet weak var currentHumidConst: UILabel!
     @IBOutlet weak var currentHumidMinConst: UILabel!
     @IBOutlet weak var editMaxHum: UITextField!
     @IBOutlet weak var editMinHum: UITextField!
     @IBOutlet weak var HumComp: UILabel!
+    // The following code initializes a variable appDelegate.
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var lineChart = LineChartView()
     
@@ -40,7 +42,9 @@ class OwnerHumidChartViewController: UIViewController, ChartViewDelegate {
         var test = [ChartDataEntry]()
         // The following appDelegate function indexes into the node 'HunterApt to get
         // access to all the associated children.
-        var entries = [Double]()
+        //var entries = [Double]()
+        // The following appDelegate function indexes into the node 'HunterApt to get
+        // access to all the associated children.
         appDelegate.ref.child("HunterApt").getData(completion: { error, snapshot in
             guard error == nil else {
                 print(error!.localizedDescription)
@@ -50,18 +54,20 @@ class OwnerHumidChartViewController: UIViewController, ChartViewDelegate {
             // These values will serve as the x and y points for the graph configured.
             let entries = snapshot.value as? NSDictionary
             let humid = entries?["humidity"] as? [Double] ?? [0.0005]
-            let hum = entries?["humiditycomplaints"] as? Double ?? 0.0005
-            self.HumComp.text = String(hum)
-            
-            let humConst = entries? ["humidity_max"] as? String ?? ""
-            self.currentHumidConst.text = String(humConst)
-            let humMinConst = entries? ["humidity_min"] as? String ?? ""
-            self.currentHumidMinConst.text = String(humMinConst)
-            
-            var time = entries?["time"] as? [NSString] ?? [""]
-            for x in 0..<70 {
+            for x in (humid.count-70)..<humid.count {
                 test.append(ChartDataEntry(x: Double(x-70), y: Double(humid[x])))
             }
+            // The following displays the current humidity complaints.
+            let hum = entries?["humiditycomplaints"] as? Double ?? 0.0005
+            self.HumComp.text = String(hum)
+    
+            // The following displays the current humidity constraints.
+            let humConst = entries? ["humidity_max"] as? String ?? ""
+            self.currentHumidConst.text = String(humConst) + " %"
+            let humMinConst = entries? ["humidity_min"] as? String ?? ""
+            self.currentHumidMinConst.text = String(humMinConst) + " %"
+
+            
             // The following code creates modifications to the graph being displayed.
             // For example eliminating the xAxis labels and only having the Y axis labels
             // appear on one side of the graph instead of both.
@@ -79,10 +85,11 @@ class OwnerHumidChartViewController: UIViewController, ChartViewDelegate {
         }
         )
     }
-    
+    // The following function apply saves the newly updated humidity max constraint to the database.
     @IBAction func apply_pressed(_ sender: Any) {
         appDelegate.ref.child("HunterApt").child("humidity_max").setValue(editMaxHum.text);
     }
+    // The following function apply saves the newly updated humidity min constraint to the database.
     @IBAction func apply_min_pressed(_ sender: Any) {
         appDelegate.ref.child("HunterApt").child("humidity_min").setValue(editMinHum.text);
     }

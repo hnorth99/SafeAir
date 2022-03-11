@@ -2,6 +2,7 @@
 //  SafeAirDevice
 //  Created by Rafka Daou on 2/28/22.
 
+// The following are packages imported for this program.
 import UIKit
 import Charts
 import TinyConstraints
@@ -20,7 +21,8 @@ class HumidChartViewController: UIViewController, ChartViewDelegate {
         super.viewDidLoad()
         lineChart.delegate = self
     }
-    
+    // The following function initializes the chart allignment on the
+    // view controller.
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         // The following line configures the display of the graph.
@@ -33,7 +35,9 @@ class HumidChartViewController: UIViewController, ChartViewDelegate {
         var test = [ChartDataEntry]()
         // The following appDelegate function indexes into the node 'HunterApt to get
         // access to all the associated children.
-        var entries = [Double]()
+        //var entries = [Double]()
+        // The following appDelegate function indexes into the node 'HunterApt to get
+        // access to all the associated children.
         appDelegate.ref.child("HunterApt").getData(completion: { error, snapshot in
             guard error == nil else {
                 print(error!.localizedDescription)
@@ -44,8 +48,8 @@ class HumidChartViewController: UIViewController, ChartViewDelegate {
             let entries = snapshot.value as? NSDictionary
             let humid = entries?["humidity"] as? [Double] ?? [0.0005]
             
-            var time = entries?["time"] as? [NSString] ?? [""]
-            for x in 0..<70 {
+            //var time = entries?["time"] as? [NSString] ?? [""]
+            for x in (humid.count-70)..<humid.count {
                 test.append(ChartDataEntry(x: Double(x-70), y: Double(humid[x])))
             }
             // The following code creates modifications to the graph being displayed.
@@ -65,14 +69,17 @@ class HumidChartViewController: UIViewController, ChartViewDelegate {
         }
         )
     }
+    // The function send_complaint gives the customer an ability to alert the owner
+    // if they are not pleased with the air quality in the store.
     @IBAction func send_complaint(_ sender: Any) {
+        // The following call to appDelegate checks to see if there is data to be
+        // fetched from the specified node and returns an error otherwise.
         appDelegate.ref.child("HunterApt").getData(completion: { error, snapshot in
             guard error == nil else {
                 print(error!.localizedDescription)
                 return;
             }
-            // 'maxcapacity' and 'Time' are then the selected child node of Hunter Apt.
-            // These values will serve as the x and y points for the graph configured.
+            // If the user complains, the value of complaints in the database is incremented.
             let entries = snapshot.value as? NSDictionary
             let complaints = entries?["humiditycomplaints"] as? Double ?? 0.0005
             self.appDelegate.ref.child("HunterApt").child("humiditycomplaints").setValue(complaints + 1.0);
