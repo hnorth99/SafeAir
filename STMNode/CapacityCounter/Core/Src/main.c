@@ -74,12 +74,15 @@ void MX_USB_HOST_Process(void);
 /**
   * @brief  The application entry point.
   * @retval int
+  *
+  * runs the capacity counting code. Will count the capacity and send data to
+  * raspi4 to be dislayed. 
   */
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  int capacity = 0;
-  int cycles = 0;
+  int capacity = 0; // current capacity of space
+  int cycles = 0; // count of cycles to send data
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -118,7 +121,7 @@ int main(void)
     MX_USB_HOST_Process();
 
     /* USER CODE BEGIN 3 */
-    //GPIO pins
+    //GPIO pins indicating sensor outside or inside an entrance frame
     int out_sensor = HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_0);
     int in_sensor  = HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2);
 
@@ -127,7 +130,17 @@ int main(void)
     HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, 0);
     HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, 0);
 
-    // Capacity Counter
+    /* Capacity Counter - uses 4 cases to interpret input form 2 motion sensors.
+     * NO_LIT: both sensors do not sense person
+     * OUT_LIT: only the outside motion sensor senses a person
+     * IN_LIT: only the inside motion sensor senses a person
+     * BOTH_LIT: both sensors sense a person.
+     *
+     * from the BOTH_LIT stage to the OUT_LIT stage: this indicates
+     * that a person has left and the capacity will -1
+     * from the BOTH_LIT stage to the IN_LIT stage: this indicates 
+     * that a person has entered and the capacity will +1
+    */
     switch (st) {
     	case NO_LIT:
     		if (out_sensor && !in_sensor) {
