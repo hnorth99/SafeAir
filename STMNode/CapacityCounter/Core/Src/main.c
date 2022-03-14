@@ -125,6 +125,7 @@ int main(void)
     int out_sensor = HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_0);
     int in_sensor  = HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2);
 
+    // user feedback, a specfic light will turn on when a specific case is entered below
     HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, 0);
     HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, 0);
     HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, 0);
