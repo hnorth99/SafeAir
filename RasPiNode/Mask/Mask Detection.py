@@ -24,12 +24,15 @@ import requests
 cascade_face_detector = cv.CascadeClassifier()
 cascade_face_detector.load('haarcascade_frontalface_default.xml')
 
+
+# OpenCV DNN Face Detection Model downloaded at
+# https://github.com/opencv/opencv_3rdparty/blob/dnn_samples_face_detector_20170830/res10_300x300_ssd_iter_140000.caffemodel 
 dnn_face_detector = cv.dnn.readNet('deploy.prototxt.txt', 'res10_300x300_ssd_iter_140000.caffemodel')
 
 yolo_face_detector = cv.dnn.readNetFromDarknet('yolov3-face.cfg' , 'yolov3-wider_16000.weights')
 
 # Load Mask Detection Models
-#model = keras.models.load_model('mask_detector')
+model = keras.models.load_model('mask_detector')
 
 # Load the TFLite model in TFLite Interpreter
 interpreter = tflite.Interpreter('model.tflite')
@@ -617,6 +620,38 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
         
 cv.destroyAllWindows()
 
+'''
+******************************************************************************
+**********************CITATIONS***********************************************
+******************************************************************************
 
+MLX90614 Infrared Sensor Python library
+https://docs.circuitpython.org/projects/mlx90614/en/latest/
 
+STM32F4 HAL User Manual
+file:///C:/Users/melin/AppData/Local/Temp/dm00105879-description-of-stm32f4-hal-and-ll-drivers-stmicroelectronics.pdf
 
+Tutorial and Mask Detection Code: COVID-19: Face Mask Detector with OpenCV, Keras/TensorFlow, and Deep Learning
+https://pyimagesearch.com/2020/05/04/covid-19-face-mask-detector-with-opencv-keras-tensorflow-and-deep-learning/ 
+
+OpenCV Guide to Deep Learning
+https://learnopencv.com/deep-learning-with-opencvs-dnn-module-a-definitive-guide/
+
+OpenCV Library and Documentation
+https://docs.opencv.org/ 
+
+Tensorflow API
+https://www.tensorflow.org/guide 
+
+Keras API
+https://faroit.com/keras-docs/1.2.0/ 
+
+OpenCV DNN Face Detection Model
+https://github.com/opencv/opencv_3rdparty/blob/dnn_samples_face_detector_20170830/res10_300x300_ssd_iter_140000.caffemodel 
+
+URL Request Library
+https://docs.python.org/3/library/urllib.request.html 
+
+Losant MQTT Python Client
+https://docs.losant.com/mqtt/python/ 
+'''
